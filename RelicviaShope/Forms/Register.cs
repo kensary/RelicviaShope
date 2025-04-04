@@ -49,4 +49,9 @@ public partial class Register : Form
     {
 
     }
+
+    private void panel3_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
 }

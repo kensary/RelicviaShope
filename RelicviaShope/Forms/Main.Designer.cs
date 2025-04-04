@@ -59,7 +59,7 @@ partial class Main
         panel1.Dock = DockStyle.Left;
         panel1.Location = new Point(0, 0);
         panel1.Name = "panel1";
-        panel1.Size = new Size(200, 450);
+        panel1.Size = new Size(200, 486);
         panel1.TabIndex = 0;
         panel1.Paint += panel1_Paint;
         // 
@@ -188,7 +188,7 @@ partial class Main
         panel2.Dock = DockStyle.Top;
         panel2.Location = new Point(200, 0);
         panel2.Name = "panel2";
-        panel2.Size = new Size(600, 76);
+        panel2.Size = new Size(797, 76);
         panel2.TabIndex = 1;
         // 
         // label3
@@ -197,7 +197,7 @@ partial class Main
         label3.AutoSize = true;
         label3.Font = new Font("MS UI Gothic", 15.75F);
         label3.ForeColor = Color.FromArgb(218, 220, 238);
-        label3.Location = new Point(231, 47);
+        label3.Location = new Point(329, 47);
         label3.Name = "label3";
         label3.Size = new Size(157, 21);
         label3.TabIndex = 3;
@@ -209,7 +209,7 @@ partial class Main
         label2.AutoSize = true;
         label2.Font = new Font("Old English Text MT", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
         label2.ForeColor = Color.FromArgb(218, 220, 238);
-        label2.Location = new Point(188, 0);
+        label2.Location = new Point(286, 0);
         label2.Name = "label2";
         label2.Size = new Size(239, 44);
         label2.TabIndex = 0;
@@ -221,15 +221,16 @@ partial class Main
         panel3.Dock = DockStyle.Fill;
         panel3.Location = new Point(200, 76);
         panel3.Name = "panel3";
-        panel3.Size = new Size(600, 374);
+        panel3.Size = new Size(797, 410);
         panel3.TabIndex = 2;
+        panel3.Paint += panel3_Paint;
         // 
         // Main
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(78, 79, 90);
-        ClientSize = new Size(800, 450);
+        ClientSize = new Size(997, 486);
         Controls.Add(panel3);
         Controls.Add(panel2);
         Controls.Add(panel1);

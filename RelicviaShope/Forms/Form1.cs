@@ -44,4 +44,9 @@ public partial class Form1 : Form
     {
 
     }
+
+    private void panel3_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
 }

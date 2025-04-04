@@ -11,6 +11,6 @@ public class Tovar
     public List<ShopingCard> ShopingCards { get; set; } =[]; // корзина товара
     public override string ToString()
     {
-        return $"{Name} - {Price} - продавец: {TraderId}$";
+        return $"{Name}||цена: {Price}$||id продавца: {TraderId}";
     }
 }

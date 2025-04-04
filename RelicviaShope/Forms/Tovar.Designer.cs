@@ -34,6 +34,7 @@ partial class TovarForm
         button1 = new Button();
         textBox1 = new TextBox();
         label2 = new Label();
+        labelTrader = new Label();
         SuspendLayout();
         // 
         // label1
@@ -41,7 +42,7 @@ partial class TovarForm
         label1.AutoSize = true;
         label1.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
         label1.ForeColor = Color.FromArgb(218, 220, 238);
-        label1.Location = new Point(12, 31);
+        label1.Location = new Point(12, 30);
         label1.Name = "label1";
         label1.Size = new Size(178, 21);
         label1.TabIndex = 0;
@@ -53,7 +54,7 @@ partial class TovarForm
         label3.AutoSize = true;
         label3.Font = new Font("MS UI Gothic", 15.75F);
         label3.ForeColor = Color.FromArgb(218, 220, 238);
-        label3.Location = new Point(12, 428);
+        label3.Location = new Point(12, 437);
         label3.Name = "label3";
         label3.Size = new Size(94, 21);
         label3.TabIndex = 2;
@@ -97,7 +98,7 @@ partial class TovarForm
         textBox1.Name = "textBox1";
         textBox1.Size = new Size(102, 29);
         textBox1.TabIndex = 5;
-        textBox1.Text = "0";
+        textBox1.Text = "1";
         textBox1.TextChanged += textBox1_TextChanged;
         textBox1.KeyPress += textBox1_KeyPress;
         // 
@@ -112,12 +113,25 @@ partial class TovarForm
         label2.TabIndex = 6;
         label2.Text = "шт.";
         // 
+        // labelTrader
+        // 
+        labelTrader.AutoSize = true;
+        labelTrader.Font = new Font("MS UI Gothic", 15.75F);
+        labelTrader.ForeColor = Color.FromArgb(218, 220, 238);
+        labelTrader.Location = new Point(12, 412);
+        labelTrader.Name = "labelTrader";
+        labelTrader.Size = new Size(182, 21);
+        labelTrader.TabIndex = 7;
+        labelTrader.Text = "продавец:";
+        labelTrader.Click += labelTrader_Click;
+        // 
         // TovarForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(56, 55, 64);
         ClientSize = new Size(457, 518);
+        Controls.Add(labelTrader);
         Controls.Add(label2);
         Controls.Add(textBox1);
         Controls.Add(button1);
@@ -140,4 +154,5 @@ partial class TovarForm
     private Button button1;
     private TextBox textBox1;
     private Label label2;
+    private Label labelTrader;
 }

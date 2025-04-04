@@ -84,4 +84,9 @@ public partial class Main : Form
     {
         OpenChildForm(new SellForm());
     }
+
+    private void panel3_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
 }

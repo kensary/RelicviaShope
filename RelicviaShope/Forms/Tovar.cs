@@ -14,6 +14,9 @@ public partial class TovarForm : Form
         label1.Text = Tovar.ActiveTovar!.Name;
         richTextBox1.Text = Tovar.ActiveTovar.Description;
         label3.Text = Tovar.ActiveTovar.Price.ToString() + "$";
+        using DataBaseContext db = new DataBaseContext();
+        var trader = db.Users.FirstOrDefault(u => u.Id == Tovar.ActiveTovar.TraderId);
+        labelTrader.Text = "продавец: " + trader!.Name;
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -34,7 +37,7 @@ public partial class TovarForm : Form
             else
             {
                 using DataBaseContext db = new DataBaseContext();
-                if (db.ShopingCards.Any(u=>u.TovarId == Tovar.ActiveTovar!.Id && u.UserId == User.ActiveUser!.Id))
+                if (db.ShopingCards.Any(u => u.TovarId == Tovar.ActiveTovar!.Id && u.UserId == User.ActiveUser!.Id))
                 {
                     ShopingCard shopingCard1 = db.ShopingCards.FirstOrDefault(u => u.TovarId == Tovar.ActiveTovar!.Id)!;
                     shopingCard1.Quantity += value;
@@ -77,5 +80,10 @@ public partial class TovarForm : Form
         {
             e.Handled = true;
         }
+    }
+
+    private void labelTrader_Click(object sender, EventArgs e)
+    {
+
     }
 }

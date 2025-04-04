@@ -61,6 +61,7 @@ partial class Form1
         panel3.Name = "panel3";
         panel3.Size = new Size(612, 450);
         panel3.TabIndex = 13;
+        panel3.Paint += panel3_Paint;
         // 
         // label1
         // 

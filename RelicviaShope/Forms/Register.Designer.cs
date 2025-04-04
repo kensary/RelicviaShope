@@ -132,6 +132,7 @@ partial class Register
         panel3.Name = "panel3";
         panel3.Size = new Size(612, 450);
         panel3.TabIndex = 10;
+        panel3.Paint += panel3_Paint;
         // 
         // textBox3
         // 
@@ -163,6 +164,7 @@ partial class Register
         Controls.Add(panel2);
         Controls.Add(panel3);
         Controls.Add(panel1);
+        FormBorderStyle = FormBorderStyle.FixedDialog;
         Name = "Register";
         Text = "Регистрация";
         panel3.ResumeLayout(false);

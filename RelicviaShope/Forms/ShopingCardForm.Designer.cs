@@ -80,7 +80,7 @@ partial class ShopingCardForm
         // 
         // panel2
         // 
-        panel2.BackColor = Color.FromArgb(224, 224, 224);
+        panel2.BackColor = Color.FromArgb(78, 79, 90);
         panel2.Controls.Add(listBox1);
         panel2.Dock = DockStyle.Fill;
         panel2.Location = new Point(0, 0);
