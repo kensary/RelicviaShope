@@ -17,14 +17,14 @@ public partial class Register : Form
     private void loginButton_Click(object sender, EventArgs e)
     {
         string login = textBox1.Text;
-        string password = "";        
+        string password = "";
         if (textBox2.Text == textBox3.Text)
         {
             password = textBox2.Text;
             User user = new User()
             {
                 Name = login,
-                Password = password 
+                Password = password
             };
             using DataBaseContext db = new DataBaseContext();
             if (db.Users.Any(u => u.Name == login))
@@ -43,5 +43,10 @@ public partial class Register : Form
         {
             MessageBox.Show("Вы ввели разные пароли, повторите попытку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+    }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
     }
 }

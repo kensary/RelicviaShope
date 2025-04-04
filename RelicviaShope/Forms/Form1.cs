@@ -23,10 +23,10 @@ public partial class Form1 : Form
         string password = textBox2.Text;
         using DataBaseContext db = new DataBaseContext();
         var user = db.Users.FirstOrDefault(u => u.Name == login && u.Password == password);
-        if(user != null)
+        if (user != null)
         {
             User.ActiveUser = user;
-            MessageBox.Show("Вы успешно вошли в систему", "Ура!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Вы успешно вошли в систему", "Ура!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Main main = new Main();
             this.Hide();
             main.ShowDialog();
@@ -37,6 +37,11 @@ public partial class Form1 : Form
         {
             MessageBox.Show("Вы ввели не верный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+    }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
 
     }
 }

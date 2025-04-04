@@ -39,7 +39,7 @@ partial class ShopingCardForm
         // 
         // panel1
         // 
-        panel1.BackColor = Color.Gray;
+        panel1.BackColor = Color.FromArgb(64, 63, 73);
         panel1.Controls.Add(button2);
         panel1.Controls.Add(button1);
         panel1.Dock = DockStyle.Bottom;
@@ -51,10 +51,13 @@ partial class ShopingCardForm
         // button2
         // 
         button2.Anchor = AnchorStyles.Left;
-        button2.BackColor = Color.FromArgb(255, 128, 128);
+        button2.BackColor = Color.FromArgb(78, 79, 90);
+        button2.FlatStyle = FlatStyle.Flat;
+        button2.Font = new Font("MS UI Gothic", 15.75F);
+        button2.ForeColor = Color.FromArgb(218, 220, 238);
         button2.Location = new Point(33, 36);
         button2.Name = "button2";
-        button2.Size = new Size(145, 50);
+        button2.Size = new Size(355, 50);
         button2.TabIndex = 1;
         button2.Text = "очистить корзину";
         button2.UseVisualStyleBackColor = false;
@@ -63,13 +66,17 @@ partial class ShopingCardForm
         // button1
         // 
         button1.Anchor = AnchorStyles.Right;
-        button1.BackColor = Color.FromArgb(128, 255, 128);
-        button1.Location = new Point(623, 36);
+        button1.BackColor = Color.FromArgb(78, 79, 90);
+        button1.FlatStyle = FlatStyle.Flat;
+        button1.Font = new Font("MS UI Gothic", 15.75F);
+        button1.ForeColor = Color.FromArgb(218, 220, 238);
+        button1.Location = new Point(619, 36);
         button1.Name = "button1";
-        button1.Size = new Size(145, 50);
+        button1.Size = new Size(149, 50);
         button1.TabIndex = 0;
         button1.Text = "купить";
         button1.UseVisualStyleBackColor = false;
+        button1.Click += button1_Click;
         // 
         // panel2
         // 
@@ -83,9 +90,11 @@ partial class ShopingCardForm
         // 
         // listBox1
         // 
-        listBox1.BackColor = Color.Silver;
+        listBox1.BackColor = Color.FromArgb(78, 79, 90);
+        listBox1.BorderStyle = BorderStyle.None;
         listBox1.Dock = DockStyle.Fill;
-        listBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        listBox1.Font = new Font("MS UI Gothic", 15.75F);
+        listBox1.ForeColor = Color.FromArgb(218, 220, 238);
         listBox1.FormattingEnabled = true;
         listBox1.Location = new Point(0, 0);
         listBox1.Name = "listBox1";
@@ -99,6 +108,7 @@ partial class ShopingCardForm
         ClientSize = new Size(800, 450);
         Controls.Add(panel2);
         Controls.Add(panel1);
+        FormBorderStyle = FormBorderStyle.None;
         Name = "ShopingCardForm";
         Text = "ShopingCardForm";
         Load += ShopingCardForm_Load;

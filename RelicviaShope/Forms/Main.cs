@@ -14,7 +14,7 @@ public partial class Main : Form
     private void Main_Load(object sender, EventArgs e)
     {
         login.Text = User.ActiveUser!.Name;
-        label1.Text = User.ActiveUser!.Id.ToString();
+        label1.Text = $"id: {User.ActiveUser!.Id.ToString()}";
         OpenChildForm(new ListBoxForm());
     }
 
@@ -51,5 +51,10 @@ public partial class Main : Form
     {
         OpenChildForm(new ListBoxForm());
         label3.Text = "каталог";
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        //TODO: реализовать профиль, добавить возможность получения прав админа и продовца
     }
 }

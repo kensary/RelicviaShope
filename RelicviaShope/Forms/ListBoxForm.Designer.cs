@@ -33,9 +33,10 @@ partial class ListBoxForm
         // 
         // listBox1
         // 
-        listBox1.BackColor = Color.Silver;
+        listBox1.BackColor = Color.FromArgb(78, 79, 90);
         listBox1.Dock = DockStyle.Fill;
-        listBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        listBox1.Font = new Font("MS UI Gothic", 15.75F);
+        listBox1.ForeColor = Color.FromArgb(218, 220, 238);
         listBox1.FormattingEnabled = true;
         listBox1.Location = new Point(0, 0);
         listBox1.Name = "listBox1";
@@ -49,6 +50,7 @@ partial class ListBoxForm
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
         Controls.Add(listBox1);
+        FormBorderStyle = FormBorderStyle.None;
         Name = "ListBoxForm";
         Text = "ListBoxForm";
         Load += ListBoxForm_Load;
