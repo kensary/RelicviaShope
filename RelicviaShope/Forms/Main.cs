@@ -1,4 +1,5 @@
-﻿using RelicviaShope.Models;
+﻿using RelicviaShope.Forms;
+using RelicviaShope.Models;
 
 namespace RelicviaShope;
 
@@ -16,6 +17,21 @@ public partial class Main : Form
         login.Text = User.ActiveUser!.Name;
         label1.Text = $"id: {User.ActiveUser!.Id.ToString()}";
         OpenChildForm(new ListBoxForm());
+        using DataBaseContext db = new DataBaseContext();
+        var user = db.Users.FirstOrDefault(u => u.Id == User.ActiveUser!.Id);
+        if (user is Models.Trader)
+        {
+            button4.Visible = true;
+            button4.Enabled = true;
+        }
+        if (user is Models.Admin)
+        {
+            button5.Visible = true;
+            button5.Enabled = true;
+
+            button6.Visible = true;
+            button6.Enabled = true;
+        }
     }
 
 
@@ -55,6 +71,17 @@ public partial class Main : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
-        //TODO: реализовать профиль, добавить возможность получения прав админа и продовца
+        OpenChildForm(new Profile());
+        label3.Text = "профиль";
+    }
+
+    private void button5_Click(object sender, EventArgs e)
+    {
+        OpenChildForm(new RequestTraders());
+    }
+
+    private void button4_Click(object sender, EventArgs e)
+    {
+        OpenChildForm(new SellForm());
     }
 }

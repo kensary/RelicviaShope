@@ -7,9 +7,10 @@ public class Tovar
     public required string Name { get; set; }
     public required string Description { get; set; }
     public required decimal Price { get; set; }
+    public required int TraderId { get; set; } // id продавца
     public List<ShopingCard> ShopingCards { get; set; } =[]; // корзина товара
     public override string ToString()
     {
-        return $"{Name} - {Price}$";
+        return $"{Name} - {Price} - продавец: {TraderId}$";
     }
 }

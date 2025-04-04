@@ -29,6 +29,9 @@ partial class Main
     private void InitializeComponent()
     {
         panel1 = new Panel();
+        button6 = new Button();
+        button5 = new Button();
+        button4 = new Button();
         button3 = new Button();
         button2 = new Button();
         button1 = new Button();
@@ -45,6 +48,9 @@ partial class Main
         // panel1
         // 
         panel1.BackColor = Color.FromArgb(56, 55, 64);
+        panel1.Controls.Add(button6);
+        panel1.Controls.Add(button5);
+        panel1.Controls.Add(button4);
         panel1.Controls.Add(button3);
         panel1.Controls.Add(button2);
         panel1.Controls.Add(button1);
@@ -56,6 +62,56 @@ partial class Main
         panel1.Size = new Size(200, 450);
         panel1.TabIndex = 0;
         panel1.Paint += panel1_Paint;
+        // 
+        // button6
+        // 
+        button6.BackColor = Color.FromArgb(78, 79, 90);
+        button6.Cursor = Cursors.Hand;
+        button6.Enabled = false;
+        button6.FlatStyle = FlatStyle.Flat;
+        button6.Font = new Font("MS UI Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        button6.ForeColor = Color.FromArgb(218, 220, 238);
+        button6.Location = new Point(0, 394);
+        button6.Name = "button6";
+        button6.Size = new Size(200, 43);
+        button6.TabIndex = 6;
+        button6.Text = "пользователи";
+        button6.UseVisualStyleBackColor = false;
+        button6.Visible = false;
+        // 
+        // button5
+        // 
+        button5.BackColor = Color.FromArgb(78, 79, 90);
+        button5.Cursor = Cursors.Hand;
+        button5.Enabled = false;
+        button5.FlatStyle = FlatStyle.Flat;
+        button5.Font = new Font("MS UI Gothic", 15.75F);
+        button5.ForeColor = Color.FromArgb(218, 220, 238);
+        button5.Location = new Point(0, 331);
+        button5.Name = "button5";
+        button5.Size = new Size(200, 43);
+        button5.TabIndex = 5;
+        button5.Text = "заявки";
+        button5.UseVisualStyleBackColor = false;
+        button5.Visible = false;
+        button5.Click += button5_Click;
+        // 
+        // button4
+        // 
+        button4.BackColor = Color.FromArgb(78, 79, 90);
+        button4.Cursor = Cursors.Hand;
+        button4.Enabled = false;
+        button4.FlatStyle = FlatStyle.Flat;
+        button4.Font = new Font("MS UI Gothic", 15.75F);
+        button4.ForeColor = Color.FromArgb(218, 220, 238);
+        button4.Location = new Point(0, 267);
+        button4.Name = "button4";
+        button4.Size = new Size(200, 43);
+        button4.TabIndex = 4;
+        button4.Text = "продать";
+        button4.UseVisualStyleBackColor = false;
+        button4.Visible = false;
+        button4.Click += button4_Click;
         // 
         // button3
         // 
@@ -94,7 +150,7 @@ partial class Main
         button1.FlatStyle = FlatStyle.Flat;
         button1.Font = new Font("MS UI Gothic", 15.75F);
         button1.ForeColor = Color.FromArgb(218, 220, 238);
-        button1.Location = new Point(0, 82);
+        button1.Location = new Point(0, 79);
         button1.Name = "button1";
         button1.Size = new Size(200, 43);
         button1.TabIndex = 0;
@@ -199,4 +255,7 @@ partial class Main
     private Panel panel3;
     private Label label3;
     private Button button3;
+    private Button button6;
+    private Button button5;
+    private Button button4;
 }

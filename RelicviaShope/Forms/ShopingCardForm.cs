@@ -36,4 +36,9 @@ public partial class ShopingCardForm : Form
     {
         //TODO: реализовать покупку
     }
+
+    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

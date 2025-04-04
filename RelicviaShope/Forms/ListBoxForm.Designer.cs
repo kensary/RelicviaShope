@@ -34,6 +34,7 @@ partial class ListBoxForm
         // listBox1
         // 
         listBox1.BackColor = Color.FromArgb(78, 79, 90);
+        listBox1.BorderStyle = BorderStyle.None;
         listBox1.Dock = DockStyle.Fill;
         listBox1.Font = new Font("MS UI Gothic", 15.75F);
         listBox1.ForeColor = Color.FromArgb(218, 220, 238);
