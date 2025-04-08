@@ -25,8 +25,10 @@ public partial class ShopingCardForm : Form
     private void button2_Click(object sender, EventArgs e)
     {
         DataBaseContext db = new DataBaseContext();
+
         var user = db.Users.Include(u => u.ShopingCards).ThenInclude(u => u.Tovar).FirstOrDefault(u => u.Id == User.ActiveUser!.Id);
         var shopingCards = user.ShopingCards.ToArray();
+
         db.ShopingCards.RemoveRange(shopingCards);
         db.SaveChanges();
         listBox1.Items.Clear();

@@ -152,6 +152,7 @@ partial class Form1
         FormBorderStyle = FormBorderStyle.FixedSingle;
         Name = "Form1";
         Text = "Авторизация";
+        Load += Form1_Load;
         panel3.ResumeLayout(false);
         panel3.PerformLayout();
         ResumeLayout(false);

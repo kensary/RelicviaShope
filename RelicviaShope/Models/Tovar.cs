@@ -9,6 +9,7 @@ public class Tovar
     public required decimal Price { get; set; }
     public required int TraderId { get; set; } // id продавца
     public List<ShopingCard> ShopingCards { get; set; } =[]; // корзина товара
+    public Trader Trader { get; set; } = null!;// продавец
     public override string ToString()
     {
         return $"{Name}||цена: {Price}$||id продавца: {TraderId}";

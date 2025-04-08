@@ -16,9 +16,13 @@ public partial class Main : Form
     {
         login.Text = User.ActiveUser!.Name;
         label1.Text = $"id: {User.ActiveUser!.Id.ToString()}";
+
         OpenChildForm(new ListBoxForm());
+
         using DataBaseContext db = new DataBaseContext();
+
         var user = db.Users.FirstOrDefault(u => u.Id == User.ActiveUser!.Id);
+
         if (user is Models.Trader)
         {
             button4.Visible = true;
@@ -43,6 +47,7 @@ public partial class Main : Form
     private void button3_Click(object sender, EventArgs e)
     {
         OpenChildForm(new ShopingCardForm());
+
         label3.Text = "корзина";
     }
     public void OpenChildForm(Form childForm)
@@ -53,11 +58,14 @@ public partial class Main : Form
         }
 
         _activeForm = childForm;
+
         childForm.TopLevel = false;
         childForm.FormBorderStyle = FormBorderStyle.None;
         childForm.Dock = DockStyle.Fill;
+
         panel3.Controls.Add(childForm);
         panel3.Tag = childForm;
+
         childForm.BringToFront();
         childForm.Show();
 

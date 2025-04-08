@@ -20,23 +20,27 @@ public partial class Form1 : Form
     private void loginButton_Click(object sender, EventArgs e)
     {
         string login = textBox1.Text;
-        string password = textBox2.Text;
+        string password = GetSHA256.CreateSHA256(textBox2.Text);
         using DataBaseContext db = new DataBaseContext();
         var user = db.Users.FirstOrDefault(u => u.Name == login && u.Password == password);
         if (user != null)
         {
             User.ActiveUser = user;
+
             MessageBox.Show("Вы успешно вошли в систему", "Ура!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             Main main = new Main();
             this.Hide();
             main.ShowDialog();
             User.ActiveUser = null;
             this.Show();
+
+            return;
         }
-        else
-        {
-            MessageBox.Show("Вы ввели не верный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        MessageBox.Show(
+            "Вы ввели не верный логин или пароль",
+            "Ошибка", MessageBoxButtons.OK,
+            MessageBoxIcon.Error);
 
     }
 
@@ -46,6 +50,11 @@ public partial class Form1 : Form
     }
 
     private void panel3_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
     {
 
     }

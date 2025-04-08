@@ -26,40 +26,40 @@ public partial class TovarForm : Form
             MessageBox.Show("Количество товара должно быть больше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
-        else
+
+        int value = int.Parse(textBox1.Text);
+
+        if (value <= 0)
         {
-            int value = int.Parse(textBox1.Text);
-            if (value <= 0)
-            {
-                MessageBox.Show("Количество товара должно быть больше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                using DataBaseContext db = new DataBaseContext();
-                if (db.ShopingCards.Any(u => u.TovarId == Tovar.ActiveTovar!.Id && u.UserId == User.ActiveUser!.Id))
-                {
-                    ShopingCard shopingCard1 = db.ShopingCards.FirstOrDefault(u => u.TovarId == Tovar.ActiveTovar!.Id)!;
-                    shopingCard1.Quantity += value;
-                    db.SaveChanges();
-                    MessageBox.Show("Товар добавлен в корзину", "Ура!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    ShopingCard shopingCard = new ShopingCard()
-                    {
-                        TovarId = Tovar.ActiveTovar.Id,
-                        UserId = User.ActiveUser!.Id,
-                        Quantity = value
-                    };
-                    db.Add(shopingCard);
-                    db.SaveChanges();
-                    MessageBox.Show("Товар добавлен в корзину", "Ура!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-            }
+            MessageBox.Show("Количество товара должно быть больше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
         }
+
+        using DataBaseContext db = new DataBaseContext();
+
+        if (db.ShopingCards.Any(u => u.TovarId == Tovar.ActiveTovar!.Id && u.UserId == User.ActiveUser!.Id))
+        {
+            ShopingCard shopingCard1 = db.ShopingCards.FirstOrDefault(u => u.TovarId == Tovar.ActiveTovar!.Id)!;
+            shopingCard1.Quantity += value;
+            db.SaveChanges();
+            MessageBox.Show("Товар добавлен в корзину", "Ура!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+
+            return;
+        }
+
+        ShopingCard shopingCard = new ShopingCard()
+        {
+            TovarId = Tovar.ActiveTovar.Id,
+            UserId = User.ActiveUser!.Id,
+            Quantity = value
+        };
+
+        db.Add(shopingCard);
+        db.SaveChanges();
+        MessageBox.Show("Товар добавлен в корзину", "Ура!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        this.Close();
     }
 
     private void textBox1_TextChanged(object sender, EventArgs e)

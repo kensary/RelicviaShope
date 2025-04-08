@@ -167,6 +167,7 @@ partial class Register
         FormBorderStyle = FormBorderStyle.FixedDialog;
         Name = "Register";
         Text = "Регистрация";
+        Load += Register_Load;
         panel3.ResumeLayout(false);
         panel3.PerformLayout();
         ResumeLayout(false);
