@@ -27,6 +27,12 @@ public partial class TovarForm : Form
             return;
         }
 
+        if (!int.TryParse(textBox1.Text, out _))
+        {
+            MessageBox.Show("Количество товара должно быть числом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
         int value = int.Parse(textBox1.Text);
 
         if (value <= 0)

@@ -1,4 +1,5 @@
 ﻿using RelicviaShope.Models;
+using RelicviaShope.Providers;
 
 namespace RelicviaShope.Forms;
 
@@ -11,10 +12,12 @@ public partial class ResetPasswordForm : Form
 
     private void buttonContinue_Click(object sender, EventArgs e)
     {
-        string passwordActiv = GetSHA256.CreateSHA256(textBoxActivPassword.Text);
+        string passwordActiv = PasswordHash.CreateSHA256(textBoxActivPassword.Text);
         string password = textBoxNewPassword.Text;
         string passwordConfirm = textBoxCopyPassword.Text;
+
         using DataBaseContext db = new DataBaseContext();
+
         var user = db.Users.FirstOrDefault(u => u.Id == User.ActiveUser!.Id);
 
         if (password != passwordConfirm)
@@ -29,7 +32,7 @@ public partial class ResetPasswordForm : Form
             return;
         }
 
-        password = GetSHA256.CreateSHA256(password);
+        password = PasswordHash.CreateSHA256(password);
         user.Password = password;
         db.SaveChanges();
         MessageBox.Show("Пароль успешно изменен", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
