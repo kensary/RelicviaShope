@@ -13,13 +13,13 @@ public partial class RequestTraders : Form
     {
         using DataBaseContext db = new DataBaseContext();
         var requestTraders = db.HelpTraders.ToArray();
-        listBox1.Items.Clear();
-        listBox1.Items.AddRange(requestTraders);
+        listBoxRequest.Items.Clear();
+        listBoxRequest.Items.AddRange(requestTraders);
     }
 
     private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        var selectedRewuestTraders = listBox1.SelectedItem as HelpTraders;
+        var selectedRewuestTraders = listBoxRequest.SelectedItem as HelpTraders;
         if (selectedRewuestTraders != null)
         {
             HelpTraders.ActiveHelpTrader = selectedRewuestTraders;

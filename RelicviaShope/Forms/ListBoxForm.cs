@@ -13,13 +13,13 @@ public partial class ListBoxForm : Form
     {
         using DataBaseContext db = new DataBaseContext();
         var tovars = db.Tovars.ToArray();
-        listBox1.Items.Clear();
-        listBox1.Items.AddRange(tovars);
+        listBoxTovars.Items.Clear();
+        listBoxTovars.Items.AddRange(tovars);
     }
 
     private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
     {
-        var selectedTovar = listBox1.SelectedItem as Tovar;
+        var selectedTovar = listBoxTovars.SelectedItem as Tovar;
 
         if (selectedTovar != null)
         {

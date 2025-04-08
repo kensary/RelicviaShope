@@ -15,7 +15,7 @@ public partial class Main : Form
     private void Main_Load(object sender, EventArgs e)
     {
         login.Text = User.ActiveUser!.Name;
-        label1.Text = $"id: {User.ActiveUser!.Id.ToString()}";
+        labelUserID.Text = $"id: {User.ActiveUser!.Id.ToString()}";
 
         OpenChildForm(new ListBoxForm());
 

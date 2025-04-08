@@ -20,8 +20,8 @@ public partial class Form1 : Form
 
     private void loginButton_Click(object sender, EventArgs e)
     {
-        string login = textBox1.Text;
-        string password = PasswordHash.CreateSHA256(textBox2.Text);
+        string login = textBoxLogin.Text;
+        string password = PasswordHash.CreateSHA256(textBoxPassword.Text);
 
         using DataBaseContext db = new DataBaseContext();
 

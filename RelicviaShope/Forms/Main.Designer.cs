@@ -35,7 +35,7 @@ partial class Main
         button3 = new Button();
         button2 = new Button();
         button1 = new Button();
-        label1 = new Label();
+        labelUserID = new Label();
         login = new Label();
         panel2 = new Panel();
         label3 = new Label();
@@ -54,7 +54,7 @@ partial class Main
         panel1.Controls.Add(button3);
         panel1.Controls.Add(button2);
         panel1.Controls.Add(button1);
-        panel1.Controls.Add(label1);
+        panel1.Controls.Add(labelUserID);
         panel1.Controls.Add(login);
         panel1.Dock = DockStyle.Left;
         panel1.Location = new Point(0, 0);
@@ -160,14 +160,14 @@ partial class Main
         // 
         // label1
         // 
-        label1.AutoSize = true;
-        label1.Font = new Font("MS UI Gothic", 15.75F);
-        label1.ForeColor = Color.FromArgb(218, 220, 238);
-        label1.Location = new Point(12, 40);
-        label1.Name = "label1";
-        label1.Size = new Size(94, 21);
-        label1.TabIndex = 1;
-        label1.Text = "id:000000";
+        labelUserID.AutoSize = true;
+        labelUserID.Font = new Font("MS UI Gothic", 15.75F);
+        labelUserID.ForeColor = Color.FromArgb(218, 220, 238);
+        labelUserID.Location = new Point(12, 40);
+        labelUserID.Name = "label1";
+        labelUserID.Size = new Size(94, 21);
+        labelUserID.TabIndex = 1;
+        labelUserID.Text = "id:000000";
         // 
         // login
         // 
@@ -250,7 +250,7 @@ partial class Main
     private Panel panel2;
     private Button button2;
     private Button button1;
-    private Label label1;
+    private Label labelUserID;
     private Label login;
     private Label label2;
     private Panel panel3;

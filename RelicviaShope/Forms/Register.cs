@@ -17,17 +17,17 @@ public partial class Register : Form
 
     private void loginButton_Click(object sender, EventArgs e)
     {
-        string login = textBox1.Text;
+        string login = textBoxLogin.Text;
         string password = "";
 
-        if (textBox2.Text != textBox3.Text)
+        if (textBoxPassword.Text != textBoxConfirmPass.Text)
         {
             MessageBox.Show("Вы ввели разные пароли, повторите попытку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             return;
         }
 
-        password = PasswordHash.CreateSHA256(textBox2.Text);
+        password = PasswordHash.CreateSHA256(textBoxPassword.Text);
 
         User user = new User()
         {
