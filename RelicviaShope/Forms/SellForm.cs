@@ -14,7 +14,9 @@ public partial class SellForm : Form
         string tradeName = textBoxNameTade.Text;
         string tradeDescription = richTextBoxDiscription.Text;
         string tradePrice = textBoxPrice.Text;
+
         using DataBaseContext db = new DataBaseContext();
+
         Tovar tovar = new Tovar()
         {
             Name = tradeName,
@@ -22,8 +24,10 @@ public partial class SellForm : Form
             Price = Convert.ToDecimal(tradePrice),
             TraderId = User.ActiveUser!.Id
         };
+
         db.Tovars.Add(tovar);
         db.SaveChanges();
+
         MessageBox.Show("Товар успешно добавлен в базу данных", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 

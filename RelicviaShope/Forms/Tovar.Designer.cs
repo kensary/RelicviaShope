@@ -28,26 +28,26 @@ partial class TovarForm
     /// </summary>
     private void InitializeComponent()
     {
-        label1 = new Label();
+        labelName = new Label();
         label3 = new Label();
-        richTextBox1 = new RichTextBox();
+        richTextBoxDescription = new RichTextBox();
         button1 = new Button();
-        textBox1 = new TextBox();
+        textBoxPrice = new TextBox();
         label2 = new Label();
         labelTrader = new Label();
         SuspendLayout();
         // 
         // label1
         // 
-        label1.AutoSize = true;
-        label1.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-        label1.ForeColor = Color.FromArgb(218, 220, 238);
-        label1.Location = new Point(12, 30);
-        label1.Name = "label1";
-        label1.Size = new Size(178, 21);
-        label1.TabIndex = 0;
-        label1.Text = "название";
-        label1.TextAlign = ContentAlignment.MiddleCenter;
+        labelName.AutoSize = true;
+        labelName.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        labelName.ForeColor = Color.FromArgb(218, 220, 238);
+        labelName.Location = new Point(12, 30);
+        labelName.Name = "label1";
+        labelName.Size = new Size(178, 21);
+        labelName.TabIndex = 0;
+        labelName.Text = "название";
+        labelName.TextAlign = ContentAlignment.MiddleCenter;
         // 
         // label3
         // 
@@ -62,16 +62,16 @@ partial class TovarForm
         // 
         // richTextBox1
         // 
-        richTextBox1.BackColor = Color.FromArgb(78, 79, 90);
-        richTextBox1.BorderStyle = BorderStyle.None;
-        richTextBox1.Font = new Font("MS UI Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-        richTextBox1.ForeColor = Color.FromArgb(218, 220, 238);
-        richTextBox1.Location = new Point(12, 83);
-        richTextBox1.Name = "richTextBox1";
-        richTextBox1.ReadOnly = true;
-        richTextBox1.Size = new Size(433, 311);
-        richTextBox1.TabIndex = 3;
-        richTextBox1.Text = "описание";
+        richTextBoxDescription.BackColor = Color.FromArgb(78, 79, 90);
+        richTextBoxDescription.BorderStyle = BorderStyle.None;
+        richTextBoxDescription.Font = new Font("MS UI Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        richTextBoxDescription.ForeColor = Color.FromArgb(218, 220, 238);
+        richTextBoxDescription.Location = new Point(12, 83);
+        richTextBoxDescription.Name = "richTextBox1";
+        richTextBoxDescription.ReadOnly = true;
+        richTextBoxDescription.Size = new Size(433, 311);
+        richTextBoxDescription.TabIndex = 3;
+        richTextBoxDescription.Text = "описание";
         // 
         // button1
         // 
@@ -90,17 +90,17 @@ partial class TovarForm
         // 
         // textBox1
         // 
-        textBox1.BackColor = Color.FromArgb(78, 79, 90);
-        textBox1.BorderStyle = BorderStyle.None;
-        textBox1.Font = new Font("MS UI Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-        textBox1.ForeColor = Color.FromArgb(218, 220, 238);
-        textBox1.Location = new Point(209, 476);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(102, 29);
-        textBox1.TabIndex = 5;
-        textBox1.Text = "1";
-        textBox1.TextChanged += textBox1_TextChanged;
-        textBox1.KeyPress += textBox1_KeyPress;
+        textBoxPrice.BackColor = Color.FromArgb(78, 79, 90);
+        textBoxPrice.BorderStyle = BorderStyle.None;
+        textBoxPrice.Font = new Font("MS UI Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        textBoxPrice.ForeColor = Color.FromArgb(218, 220, 238);
+        textBoxPrice.Location = new Point(209, 476);
+        textBoxPrice.Name = "textBox1";
+        textBoxPrice.Size = new Size(102, 29);
+        textBoxPrice.TabIndex = 5;
+        textBoxPrice.Text = "1";
+        textBoxPrice.TextChanged += textBox1_TextChanged;
+        textBoxPrice.KeyPress += textBox1_KeyPress;
         // 
         // label2
         // 
@@ -133,11 +133,11 @@ partial class TovarForm
         ClientSize = new Size(457, 518);
         Controls.Add(labelTrader);
         Controls.Add(label2);
-        Controls.Add(textBox1);
+        Controls.Add(textBoxPrice);
         Controls.Add(button1);
-        Controls.Add(richTextBox1);
+        Controls.Add(richTextBoxDescription);
         Controls.Add(label3);
-        Controls.Add(label1);
+        Controls.Add(labelName);
         FormBorderStyle = FormBorderStyle.FixedToolWindow;
         Name = "TovarForm";
         Text = "Товар";
@@ -148,11 +148,11 @@ partial class TovarForm
 
     #endregion
 
-    private Label label1;
+    private Label labelName;
     private Label label3;
-    private RichTextBox richTextBox1;
+    private RichTextBox richTextBoxDescription;
     private Button button1;
-    private TextBox textBox1;
+    private TextBox textBoxPrice;
     private Label label2;
     private Label labelTrader;
 }

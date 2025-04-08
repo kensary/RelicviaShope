@@ -28,22 +28,22 @@ partial class ListBoxForm
     /// </summary>
     private void InitializeComponent()
     {
-        listBox1 = new ListBox();
+        listBoxTovars = new ListBox();
         SuspendLayout();
         // 
         // listBox1
         // 
-        listBox1.BackColor = Color.FromArgb(78, 79, 90);
-        listBox1.BorderStyle = BorderStyle.None;
-        listBox1.Dock = DockStyle.Fill;
-        listBox1.Font = new Font("MS UI Gothic", 15.75F);
-        listBox1.ForeColor = Color.FromArgb(218, 220, 238);
-        listBox1.FormattingEnabled = true;
-        listBox1.Location = new Point(0, 0);
-        listBox1.Name = "listBox1";
-        listBox1.Size = new Size(800, 450);
-        listBox1.TabIndex = 1;
-        listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged_1;
+        listBoxTovars.BackColor = Color.FromArgb(78, 79, 90);
+        listBoxTovars.BorderStyle = BorderStyle.None;
+        listBoxTovars.Dock = DockStyle.Fill;
+        listBoxTovars.Font = new Font("MS UI Gothic", 15.75F);
+        listBoxTovars.ForeColor = Color.FromArgb(218, 220, 238);
+        listBoxTovars.FormattingEnabled = true;
+        listBoxTovars.Location = new Point(0, 0);
+        listBoxTovars.Name = "listBox1";
+        listBoxTovars.Size = new Size(800, 450);
+        listBoxTovars.TabIndex = 1;
+        listBoxTovars.SelectedIndexChanged += listBox1_SelectedIndexChanged_1;
         // 
         // ListBoxForm
         // 
@@ -51,7 +51,7 @@ partial class ListBoxForm
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(78, 79, 90);
         ClientSize = new Size(800, 450);
-        Controls.Add(listBox1);
+        Controls.Add(listBoxTovars);
         FormBorderStyle = FormBorderStyle.None;
         Name = "ListBoxForm";
         Text = "ListBoxForm";
@@ -61,5 +61,5 @@ partial class ListBoxForm
 
     #endregion
 
-    private ListBox listBox1;
+    private ListBox listBoxTovars;
 }

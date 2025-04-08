@@ -32,7 +32,7 @@ partial class ShopingCardForm
         button2 = new Button();
         button1 = new Button();
         panel2 = new Panel();
-        listBox1 = new ListBox();
+        listBoxTovars = new ListBox();
         panel1.SuspendLayout();
         panel2.SuspendLayout();
         SuspendLayout();
@@ -81,7 +81,7 @@ partial class ShopingCardForm
         // panel2
         // 
         panel2.BackColor = Color.FromArgb(78, 79, 90);
-        panel2.Controls.Add(listBox1);
+        panel2.Controls.Add(listBoxTovars);
         panel2.Dock = DockStyle.Fill;
         panel2.Location = new Point(0, 0);
         panel2.Name = "panel2";
@@ -90,17 +90,17 @@ partial class ShopingCardForm
         // 
         // listBox1
         // 
-        listBox1.BackColor = Color.FromArgb(78, 79, 90);
-        listBox1.BorderStyle = BorderStyle.None;
-        listBox1.Dock = DockStyle.Fill;
-        listBox1.Font = new Font("MS UI Gothic", 15.75F);
-        listBox1.ForeColor = Color.FromArgb(218, 220, 238);
-        listBox1.FormattingEnabled = true;
-        listBox1.Location = new Point(0, 0);
-        listBox1.Name = "listBox1";
-        listBox1.Size = new Size(800, 340);
-        listBox1.TabIndex = 0;
-        listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+        listBoxTovars.BackColor = Color.FromArgb(78, 79, 90);
+        listBoxTovars.BorderStyle = BorderStyle.None;
+        listBoxTovars.Dock = DockStyle.Fill;
+        listBoxTovars.Font = new Font("MS UI Gothic", 15.75F);
+        listBoxTovars.ForeColor = Color.FromArgb(218, 220, 238);
+        listBoxTovars.FormattingEnabled = true;
+        listBoxTovars.Location = new Point(0, 0);
+        listBoxTovars.Name = "listBox1";
+        listBoxTovars.Size = new Size(800, 340);
+        listBoxTovars.TabIndex = 0;
+        listBoxTovars.SelectedIndexChanged += listBox1_SelectedIndexChanged;
         // 
         // ShopingCardForm
         // 
@@ -124,5 +124,5 @@ partial class ShopingCardForm
     private Button button2;
     private Button button1;
     private Panel panel2;
-    private ListBox listBox1;
+    private ListBox listBoxTovars;
 }

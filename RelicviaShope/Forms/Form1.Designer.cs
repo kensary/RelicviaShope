@@ -32,8 +32,8 @@ partial class Form1
         panel3 = new Panel();
         label1 = new Label();
         linkLabel1 = new LinkLabel();
-        textBox2 = new TextBox();
-        textBox1 = new TextBox();
+        textBoxPassword = new TextBox();
+        textBoxLogin = new TextBox();
         loginButton = new Button();
         panel1 = new Panel();
         panel3.SuspendLayout();
@@ -53,8 +53,8 @@ partial class Form1
         panel3.BackColor = Color.FromArgb(56, 55, 64);
         panel3.Controls.Add(label1);
         panel3.Controls.Add(linkLabel1);
-        panel3.Controls.Add(textBox2);
-        panel3.Controls.Add(textBox1);
+        panel3.Controls.Add(textBoxPassword);
+        panel3.Controls.Add(textBoxLogin);
         panel3.Controls.Add(loginButton);
         panel3.Dock = DockStyle.Fill;
         panel3.Location = new Point(0, 0);
@@ -92,29 +92,29 @@ partial class Form1
         // 
         // textBox2
         // 
-        textBox2.Anchor = AnchorStyles.Top;
-        textBox2.BackColor = Color.FromArgb(78, 79, 90);
-        textBox2.BorderStyle = BorderStyle.None;
-        textBox2.Font = new Font("MS UI Gothic", 15.75F);
-        textBox2.ForeColor = Color.FromArgb(218, 220, 238);
-        textBox2.Location = new Point(236, 232);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new Size(331, 21);
-        textBox2.TabIndex = 9;
-        textBox2.Text = "пароль";
+        textBoxPassword.Anchor = AnchorStyles.Top;
+        textBoxPassword.BackColor = Color.FromArgb(78, 79, 90);
+        textBoxPassword.BorderStyle = BorderStyle.None;
+        textBoxPassword.Font = new Font("MS UI Gothic", 15.75F);
+        textBoxPassword.ForeColor = Color.FromArgb(218, 220, 238);
+        textBoxPassword.Location = new Point(236, 232);
+        textBoxPassword.Name = "textBox2";
+        textBoxPassword.Size = new Size(331, 21);
+        textBoxPassword.TabIndex = 9;
+        textBoxPassword.Text = "пароль";
         // 
         // textBox1
         // 
-        textBox1.Anchor = AnchorStyles.Top;
-        textBox1.BackColor = Color.FromArgb(78, 79, 90);
-        textBox1.BorderStyle = BorderStyle.None;
-        textBox1.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-        textBox1.ForeColor = Color.FromArgb(218, 220, 238);
-        textBox1.Location = new Point(236, 181);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(331, 21);
-        textBox1.TabIndex = 8;
-        textBox1.Text = "логин";
+        textBoxLogin.Anchor = AnchorStyles.Top;
+        textBoxLogin.BackColor = Color.FromArgb(78, 79, 90);
+        textBoxLogin.BorderStyle = BorderStyle.None;
+        textBoxLogin.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        textBoxLogin.ForeColor = Color.FromArgb(218, 220, 238);
+        textBoxLogin.Location = new Point(236, 181);
+        textBoxLogin.Name = "textBox1";
+        textBoxLogin.Size = new Size(331, 21);
+        textBoxLogin.TabIndex = 8;
+        textBoxLogin.Text = "логин";
         // 
         // loginButton
         // 
@@ -152,6 +152,7 @@ partial class Form1
         FormBorderStyle = FormBorderStyle.FixedSingle;
         Name = "Form1";
         Text = "Авторизация";
+        Load += Form1_Load;
         panel3.ResumeLayout(false);
         panel3.PerformLayout();
         ResumeLayout(false);
@@ -163,8 +164,8 @@ partial class Form1
     private Panel panel3;
     private Label label1;
     private LinkLabel linkLabel1;
-    private TextBox textBox2;
-    private TextBox textBox1;
+    private TextBox textBoxPassword;
+    private TextBox textBoxLogin;
     private Button loginButton;
     private Panel panel1;
 }

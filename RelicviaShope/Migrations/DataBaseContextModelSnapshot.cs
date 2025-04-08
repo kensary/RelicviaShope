@@ -95,6 +95,8 @@ partial class DataBaseContextModelSnapshot : ModelSnapshot
 
                 b.HasKey("Id");
 
+                b.HasIndex("TraderId");
+
                 b.ToTable("Tovars");
             });
 
@@ -163,6 +165,17 @@ partial class DataBaseContextModelSnapshot : ModelSnapshot
                 b.Navigation("User");
             });
 
+        modelBuilder.Entity("RelicviaShope.Models.Tovar", b =>
+            {
+                b.HasOne("RelicviaShope.Models.Trader", "Trader")
+                    .WithMany("Tovar")
+                    .HasForeignKey("TraderId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("Trader");
+            });
+
         modelBuilder.Entity("RelicviaShope.Models.User", b =>
             {
                 b.HasOne("RelicviaShope.Models.HelpTraders", null)
@@ -201,6 +214,11 @@ partial class DataBaseContextModelSnapshot : ModelSnapshot
         modelBuilder.Entity("RelicviaShope.Models.User", b =>
             {
                 b.Navigation("ShopingCards");
+            });
+
+        modelBuilder.Entity("RelicviaShope.Models.Trader", b =>
+            {
+                b.Navigation("Tovar");
             });
 #pragma warning restore 612, 618
     }
